@@ -52,9 +52,10 @@ public abstract class Command {
      *
      * @param bootstrap the bootstrap bootstrap
      * @param namespace the parsed command line namespace
+     * @param cli contains the streams for stdout and stderr
      * @throws Exception if something goes wrong
      */
-    public abstract void run(Bootstrap<?> bootstrap, Namespace namespace) throws Exception;
+    public abstract void run(Bootstrap<?> bootstrap, Namespace namespace, Cli cli) throws Exception;
 
     /**
      * Method is called if there is an issue parsing configuration, setting up the
